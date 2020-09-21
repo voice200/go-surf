@@ -1,0 +1,257 @@
+@import "libs";
+@import "media";
+@import "var";
+@import "fonts";
+@import "global";
+
+header{
+  width: 100%;
+  height: 100vh;
+  background: url("../img/headerBackground.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  .goSurf{
+    font-weight: 800;
+    font-size: 200px;
+    line-height: 156px;
+    text-transform: uppercase;
+    opacity: 0.07;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .header__map{
+    position: absolute;
+    right: 0;
+    top: 0;
+
+  }
+
+
+  .arrowsDown{
+    position: absolute;
+    left: 30px;
+    bottom: 45px;
+    cursor: pointer;
+  }
+}
+
+.header__nav{
+  position: relative;
+  z-index: 5;
+  height: 100%;
+  width: 170px;
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+    .logoBg{
+      width: 168px;
+      height: 191px;
+      background-color: $colorLogo;
+    }
+
+    .lable__goSurf{
+      width: 300px;
+      position: absolute;
+      z-index: 6;
+      font-weight: 800;
+      font-size: 60px;
+      line-height: 86px;
+      text-transform: uppercase;
+      transform: rotate(-90deg);
+      top: 94px;
+      left: -66px;
+    }
+
+  .nav__icons{
+    margin-top: 200px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 55%;
+    width: 100%;
+    align-items: center;
+
+      .day{
+        font-weight: 800;
+        font-size: 72px;
+        line-height: 64px;
+        text-align: center;
+      }
+      .date{
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        letter-spacing: 1.4px;
+        margin-top: 7px;
+      }
+      .location{
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 14px;
+        text-align: center;
+        letter-spacing: 1.05px;
+        margin-left: 8px;
+      }
+      .name{
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+        text-align: center;
+        letter-spacing: 3px;
+        margin-top: 7px;
+      }
+  }
+}
+.sliderCommon{
+  width: 90%;
+  height: 100%;
+  position: relative;
+}
+
+.header__slider{
+  height: 90%;
+  position: relative;
+  padding-right: 80px;
+
+
+
+  .sliderItem__info{
+    margin-bottom: 128px;
+  }
+  .conteinSlide{
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    .sliderItem__infoContainerTitle{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: space-between;
+    }
+
+    .sliderItem__infoSuptitle{
+      font-size: 27px;
+      line-height: 39px;
+      text-align: right;
+      letter-spacing: 9px;
+      text-transform: uppercase;
+      opacity: 0.5;
+      display: inline-block;
+
+
+      &::before{
+        content: "";
+        width: 100px;
+        height: 1px;
+        background-color: white;
+        opacity: 0.5;
+        position: relative;
+        left: -135px;
+        top: 17px ;
+        display: block;
+      }
+    }
+    .sliderItem__infoTitle{
+      font-weight: 800;
+      font-size: 97.8723px;
+      line-height: 105px;
+      text-align: right;
+      text-transform: uppercase;
+    }
+    .sliderItem__infoOption{
+      font-weight: 800;
+      font-size: 48.9362px;
+      line-height: 105px;
+      text-transform: uppercase;
+
+    }
+
+    .sliderItem__infoContainerOption{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    .sliderItem__info{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: space-between;
+    }
+    .sliderItem__infoContainerTitle{
+      margin-bottom: 60px;
+    }
+
+  }
+}
+.slick-arrow{
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 40px;
+  cursor: pointer;
+
+}
+.nextArrow{
+  margin-right: 80px;
+
+}
+.leftArrow{
+  margin-right: 130px;
+  cursor: pointer;
+}
+.header__locationSlider{
+  max-width: 920px;
+  width: 65%;
+  float: right;
+  margin-right: 50px;
+    .slick-active{
+      .item{
+        width: 200px;
+        height: 40px;
+        border-top: 4px solid $colorBody;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        span{
+          font-weight: 300;
+          font-size: 16px;
+          line-height: 19px;
+        }
+
+        .number{
+          font-weight: 800;
+          font-size: 24px;
+          line-height: 34px;
+        }
+      }
+    }
+
+  .slick-current{
+    .item{
+      border-top: 4px solid $colorLogo;
+    }
+  }
+}
+
+.lineAnimation{
+  stroke-dashoffset: 600;
+  stroke-dasharray: 600;
+  animation: animMap 5s infinite 6s;
+}
+@keyframes animMap {
+  to{
+    stroke-dashoffset: 0;
+  }
+
+}
+
+
+
+
